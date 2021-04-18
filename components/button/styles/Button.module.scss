@@ -1,0 +1,119 @@
+@import './mixins.scss';
+@import './variables.scss';
+
+.button {
+  color: $default-color;
+  background: $default-bg;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  font-size: clamp(10px, 4vw, 1rem);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all .35s ease;
+  padding: 1rem;
+  width: auto;
+  height: 42px;
+
+  @include flex-center(center, center);
+}
+
+.button:hover, .button:focus {
+  background: #AEAEAE;
+  @include box-shadow;
+}
+
+.button[data-starticon], .button[data-endicon]{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+  span {
+    margin: auto;
+  }
+}
+
+.button[data-disabled] {
+  background: $default-bg;
+  color: $disabled-text;
+  cursor: not-allowed;
+
+  @include no-box-shadow();
+}
+
+.button[data-variant="outline"] {
+  background: $white;
+  border: 1px solid $primary;
+  color: $primary;
+  @include no-box-shadow();
+
+  &:hover {
+    background: rgba(41, 98, 255, 0.1);
+  }
+}
+
+.button[data-variant="text"] {
+  background: transparent;
+  color: $primary;
+  @include no-box-shadow();
+
+  &:hover {
+    background: rgba(41, 98, 255, 0.1);
+  }
+}
+
+.button[data-variant="text"].button[data-disabled] {
+  background: transparent;
+  color: $disabled-text;
+  
+  @include no-box-shadow();
+}
+
+.button[data-disableshadows=true] {
+  background: $primary;
+  color: $white;
+
+  @include no-box-shadow();
+}
+
+/* ───────────── SIZE ───────────── */
+.button[data-size='sm'] {
+  @include size(32px, 83px);
+}
+.button[data-size='md'] {
+  @include size(36px, 91px);
+}
+.button[data-size='lg'] {
+  @include size(42px, 103px);
+}
+
+/* ───────────── COLOR ───────────── */
+.button[data-color="primary"] {
+  background: #2962FF;
+  color: $white;
+  @include box-shadow;
+
+  &:hover {
+    background: #0039CB;
+  }
+}
+
+.button[data-color="secondary"] {
+  background: #455A64;
+  color: $white;
+  @include box-shadow;
+
+  &:hover {
+    background: #1C313A;
+  }
+}
+
+.button[data-color="danger"] {
+  background: #D32F2F;
+  color: $white;
+  @include box-shadow;
+
+  &:hover {
+    background: #9A0007;
+  }
+}
