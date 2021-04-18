@@ -32,7 +32,7 @@ export default function ButtonView() {
       <main className={styles.container}>
         <section className={styles.c_items}>
           {buttonDefault.map(({ className, name, label, props }) => (
-            <section key={props} className={styles.button_card}>
+            <section key={className} className={styles.button_card}>
               <p>
                 <code className={className}>{label}</code>
                 <span onClick={() => handleClick(className)}>
@@ -48,7 +48,7 @@ export default function ButtonView() {
 
         <section className={styles.c_items}>
           {buttonState.map(({ className, label, name, props }) => (
-            <section key={props} className={styles.button_card}>
+            <section key={className} className={styles.button_card}>
               <p>
                 <code className={className}>{label}</code>
                 <span onClick={() => handleClick(className)}>
@@ -64,7 +64,7 @@ export default function ButtonView() {
 
         <section className={styles.c_items}>
           {buttonIcon.map(({ className, label, name, props }) => (
-            <section key={props} className={styles.button_card}>
+            <section key={className} className={styles.button_card}>
               <p>
                 <code className={className}>{label}</code>
                 <span onClick={() => handleClick(className)}>
@@ -80,7 +80,7 @@ export default function ButtonView() {
 
         <section className={styles.c_items}>
           {buttonSize.map(({ className, label, name, props }) => (
-            <section key={props} className={styles.button_card}>
+            <section key={className} className={styles.button_card}>
               <p>
                 <code className={className}>{label}</code>
                 <span onClick={() => handleClick(className)}>
@@ -98,7 +98,7 @@ export default function ButtonView() {
         <section className={styles.c_items}>
           
           {buttonType.map(({ className, label, props, name }) => (
-            <section key={props} className={styles.button_card}>
+            <section key={className} className={styles.button_card}>
               <p>
                 <code className={className}>{label}</code>
                 <span onClick={() => handleClick(className)}>
