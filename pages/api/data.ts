@@ -18,7 +18,7 @@ type Props = {
 
 const buttonDefault: Props = [
   {
-    className: `default`,
+    className: `Default`,
     name: `default`,
     label: `<Button />`,
   },
@@ -79,7 +79,7 @@ const buttonIcon: Props = [
     name: `EndIcon`,
     label: `<Button endIcon />`,
     props: {
-      endIcon: `menu`, size: `lg`, color: `danger`, iconColor: `#FFF`, iconSize: 20
+      endIcon: `terminal`, size: `lg`, color: `danger`, iconColor: `#FFF`, iconSize: 25
     }
   },
   {
@@ -125,7 +125,7 @@ const buttonType: Props = [
   {
     className: `c_default`,
     name: `Default`,
-    label: `<Button />`,
+    label: `<Button color='default' />`,
     props: { color: `default`, type: `submit` }
   },
   {

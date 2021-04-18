@@ -13,9 +13,9 @@ const Button: FC<ButtonProps> = ({ children, type, ...rest }) => {
 
   return (
     <button className={styles.button} type={type} {...props} >
-      {rest.startIcon && <span>{icons[rest.startIcon](iconColor, iconSize)}</span>}
+      {rest.startIcon && icons[rest.startIcon](iconColor, iconSize)}
       {children}
-      {rest.endIcon && <span>{icons[rest.endIcon](iconColor, iconSize)}</span>}
+      {rest.endIcon && icons[rest.endIcon](iconColor, iconSize)}
     </button>
   );
 };

@@ -7,13 +7,14 @@
   outline: none;
   border: none;
   border-radius: 6px;
-  font-size: clamp(10px, 4vw, 1rem);
+  font-size: .8rem;
+  font-size: clamp(14px, 4vw, 1rem);
   font-weight: 500;
   cursor: pointer;
   transition: all .35s ease;
-  padding: 1rem;
-  width: auto;
-  height: 42px;
+  padding: 0 1rem;
+  min-width: 1rem;
+  min-height: 42px;
 
   @include flex-center(center, center);
 }
@@ -24,12 +25,19 @@
 }
 
 .button[data-starticon], .button[data-endicon]{
-  display: flex;
-  align-items: center;
+  @include flex-center(center, space-between);
+  margin: auto;
   padding: 10px;
-  justify-content: space-between;
-  span {
-    margin: auto;
+}
+
+.button[data-starticon]{
+  svg {
+    margin-right: 2px
+  }
+}
+.button[data-endicon] {
+  svg {
+    margin-left: 2px
   }
 }
 
